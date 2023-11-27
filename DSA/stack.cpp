@@ -87,3 +87,33 @@ char peek(){
 int cnt(){
     return top + 1;   // kinukuha lang kung gaano karami yung laman ng stack natin as of the moment
 }
+
+void display(){
+    if(isEmpty()){    // c-check muna kung empty kasi wala tayo id-display pag empty yung stack
+        cout << "Stack is empty" <<endl;
+    }else {
+        cout <<endl <<endl;
+        // yung i magsisimula sa top, so kung nasan ang top nandun din ang i, then hanggat yung i >= 0 i-cout natin yung stck[i]
+        // after ma-cout, babawasan natin ng isa yung i, so pag nabawasan yung i, bababa ng isa
+        for (int i = top; i >= 0; i--) {
+            cout << stck[i] <<endl;
+        }
+        cout <<endl <<endl;
+    }
+}
+
+int main(){
+
+   // push('A');
+   // push('B');
+   // push('B');
+   // push('Y');
+   // pop();
+   char x;
+   cin >> x;
+   push(x);
+    // cout << peek();
+   //  cout << cnt();   cout kasi nire-return niya yung value
+    display();
+    return 0;
+}
