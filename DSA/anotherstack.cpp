@@ -45,20 +45,22 @@ void Mystack::pop(){
 
 void Mystack::display(){
 int i;
+int j = 1;
   if(isEmpty()){
     cout << "STACK IS EMPTY" <<endl;
   } else {
     for(int i = top; i < MAX; i++){  // start from the top of the stack
-      cout << i << ".)" << S[i] <<endl;
+      cout << j << ".)" << S[i] <<endl;
     }
   }
 }
 
 int main(){
-  Mystack stck;;
+  Mystack stck;
   stck.push(2);
   stck.push(5);
   stck.push(7);
+  stck.push(9);
   stck.display();
   cout <<"After 2 pop operations...\n";
   stck.pop();
